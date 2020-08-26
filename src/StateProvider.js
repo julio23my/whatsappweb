@@ -2,9 +2,9 @@ import React, {createContext, useContext, useReducer} from 'react';
 
 export const StateContext = createContext()
 
-export const StateProvider = ({reducer,initialState,childer})=> (
+export const StateProvider = ({initialState,reducer,children})=> (
     <StateContext.Provider value={useReducer(reducer, initialState)}>
-        {childer}
+        {children}
     </StateContext.Provider>
 );
 
